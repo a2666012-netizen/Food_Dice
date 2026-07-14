@@ -1,0 +1,22 @@
+page {
+  background: linear-gradient(to right, #f0f6ff, #e6f7ff);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.preference-btn {
+  transition: all 0.3s ease;
+}
+
+.preference-btn.active {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}

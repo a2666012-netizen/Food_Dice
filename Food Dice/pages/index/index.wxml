@@ -1,0 +1,78 @@
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <text class="title">美食骰子</text>
+    <text class="subtitle">根据您的口味偏好随机推荐美食</text>
+  </view>
+
+  <!-- 主体内容 -->
+  <view class="main">
+    <!-- 偏好选择区域 -->
+    <view class="section" wx:if="{{!showResult}}">
+      <text class="section-title">1. 请选择你喜爱的食品类型</text>
+      <view class="grid">
+        <button bindtap="selectPreference" data-type="chinese" class="preference-btn card {{currentPreference === 'chinese' ? 'active' : ''}}">
+          <text class="iconfont icon-utensils"></text>
+          <text class="btn-text">中式美食</text>
+        </button>
+        <button bindtap="selectPreference" data-type="italian" class="preference-btn card {{currentPreference === 'italian' ? 'active' : ''}}">
+          <text class="iconfont icon-pizza"></text>
+          <text class="btn-text">意大利美食</text>
+        </button>
+        <button bindtap="selectPreference" data-type="american" class="preference-btn card {{currentPreference === 'american' ? 'active' : ''}}">
+          <text class="iconfont icon-hamburger"></text>
+          <text class="btn-text">美式快餐</text>
+        </button>
+        <button bindtap="selectPreference" data-type="japanese" class="preference-btn card {{currentPreference === 'japanese' ? 'active' : ''}}">
+          <text class="iconfont icon-fish"></text>
+          <text class="btn-text">日式料理</text>
+        </button>
+        <button bindtap="selectPreference" data-type="korean" class="preference-btn card {{currentPreference === 'korean' ? 'active' : ''}}">
+          <text class="iconfont icon-pepper"></text>
+          <text class="btn-text">韩式料理</text>
+        </button>
+        <button bindtap="selectPreference" data-type="southeast_asian" class="preference-btn card {{currentPreference === 'southeast_asian' ? 'active' : ''}}">
+          <text class="iconfont icon-leaf"></text>
+          <text class="btn-text">东南亚菜</text>
+        </button>
+        <button bindtap="selectPreference" data-type="vegetarian" class="preference-btn card {{currentPreference === 'vegetarian' ? 'active' : ''}}">
+          <text class="iconfont icon-seedling"></text>
+          <text class="btn-text">素食主义</text>
+        </button>
+        <button bindtap="selectPreference" data-type="mediterranean" class="preference-btn card {{currentPreference === 'mediterranean' ? 'active' : ''}}">
+          <text class="iconfont icon-wind"></text>
+          <text class="btn-text">地中海饮食</text>
+        </button>
+      </view>
+      <view class="btn-group">
+        <button bindtap="generateMeals" class="generate-btn">生成推荐菜单</button>
+      </view>
+    </view>
+
+    <!-- 结果展示区域 -->
+    <view class="section" wx:else>
+      <text class="section-title">2. 推荐你的三餐菜单</text>
+      <view class="result-card card">
+        <text class="card-title"><text class="iconfont icon-sun"></text>早餐推荐</text>
+        <text class="card-content">{{breakfast}}</text>
+      </view>
+      <view class="result-card card">
+        <text class="card-title"><text class="iconfont icon-cloud-sun"></text>午餐推荐</text>
+        <text class="card-content">{{lunch}}</text>
+      </view>
+      <view class="result-card card">
+        <text class="card-title"><text class="iconfont icon-moon"></text>晚餐推荐</text>
+        <text class="card-content">{{dinner}}</text>
+      </view>
+      <view class="btn-group">
+        <button bindtap="regenerate" class="common-btn regenerate-btn">重新生成</button>
+        <button bindtap="reset" class="common-btn reset-btn">重新选择偏好</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部 -->
+  <view class="footer">
+    <text class="copyright"></text>
+  </view>
+</view>

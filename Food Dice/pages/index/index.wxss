@@ -1,0 +1,233 @@
+/* 页面最外层容器：采用弹性布局，垂直居中所有子元素，并设置内边距和最小高度 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 40rpx;
+  min-height: 100vh;
+}
+/* 头部区域：居中显示，并设置底部外边距 */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 主标题：大号加粗蓝色字体，使用弹性布局实现水平和垂直居中 */
+.title {
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #2563eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh; /* 高度建议根据实际父容器动态调整 */
+}
+
+/* 副标题：灰色稍小字体，位于主标题下方 */
+.subtitle {
+  font-size: 30rpx;
+  color: #6b7280;
+  margin-top: 10rpx;
+  display: block;
+}
+/* 主体内容容器：白色背景，带有轻微阴影，宽度占满 */
+.main {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  padding: 30rpx;
+}
+
+/* 功能区块容器：每个区块之间有底部间距 */
+.section {
+  margin-bottom: 20rpx;
+}
+
+/* 区块标题：深色加粗字体，作为块级元素显示 */
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1f2937;
+  display: block;
+  margin-bottom: 30rpx;
+}
+/* 按钮网格布局：两列等宽网格，设置间距 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+/* 偏好按钮基础样式：垂直排列，固定宽高和圆角 */
+.preference-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  font-size: 28rpx;
+  width: 300rpx;
+  height: 200rpx;
+  border-radius: 35rpx;
+}
+
+/* 按钮1-8的背景色与边框颜色定义，使用:nth-child选择器 */
+.preference-btn:nth-child(1) { background: #eff6ff; border: 2rpx solid #bfdbfe; }
+.preference-btn:nth-child(2) { background: #f0fdf4; border: 2rpx solid #bbf7d0; }
+.preference-btn:nth-child(3) { background: #fef2f2; border: 2rpx solid #fecaca; }
+.preference-btn:nth-child(4) { background: #f5f3ff; border: 2rpx solid #ddd6fe; }
+.preference-btn:nth-child(5) { background: #fdf2f8; border: 2rpx solid #f9d5e5; }
+.preference-btn:nth-child(6) { background: #fffbeb; border: 2rpx solid #fde68a; }
+.preference-btn:nth-child(7) { background: #f0fdf4; border: 2rpx solid #99f6e4; }
+.preference-btn:nth-child(8) { background: #eefeff; border: 2rpx solid #a0e9ff; }
+/* 按钮内图标通用样式：较大字号，底部有间距 */
+.iconfont {
+  font-size: 48rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 按钮1-8的图标颜色定义，与背景色系匹配 */
+.preference-btn:nth-child(1) .iconfont { color: #3b82f6; }
+.preference-btn:nth-child(2) .iconfont { color: #22c55e; }
+.preference-btn:nth-child(3) .iconfont { color: #ef4444; }
+.preference-btn:nth-child(4) .iconfont { color: #8b5cf6; }
+.preference-btn:nth-child(5) .iconfont { color: #ec4899; }
+.preference-btn:nth-child(6) .iconfont { color: #eab308; }
+.preference-btn:nth-child(7) .iconfont { color: #16a34a; }
+.preference-btn:nth-child(8) .iconfont { color: #ca8a04; }
+
+/* 按钮文字样式：深灰色，较小字号 */
+.btn-text {
+  color: #374151;
+  font-size: 25rpx;
+}
+/* 按钮内图标通用样式：较大字号，底部有间距 */
+.iconfont {
+  font-size: 48rpx;
+  margin-bottom: 10rpx;
+}
+
+/* 按钮1-8的图标颜色定义，与背景色系匹配 */
+.preference-btn:nth-child(1) .iconfont { color: #3b82f6; }
+.preference-btn:nth-child(2) .iconfont { color: #22c55e; }
+.preference-btn:nth-child(3) .iconfont { color: #ef4444; }
+.preference-btn:nth-child(4) .iconfont { color: #8b5cf6; }
+.preference-btn:nth-child(5) .iconfont { color: #ec4899; }
+.preference-btn:nth-child(6) .iconfont { color: #eab308; }
+.preference-btn:nth-child(7) .iconfont { color: #16a34a; }
+.preference-btn:nth-child(8) .iconfont { color: #ca8a04; }
+
+/* 按钮文字样式：深灰色，较小字号 */
+.btn-text {
+  color: #374151;
+  font-size: 25rpx;
+}
+/* 生成按钮：蓝色背景，圆角，悬停时颜色加深 */
+.generate-btn {
+  padding: 20rpx;
+  margin: 0rpx 15rpx;
+  border-radius: 40rpx;
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: 600;
+  border: none;
+  background: #3b82f6;
+}
+.generate-btn:hover { background: #2563eb; }
+
+/* 重新生成按钮：绿色背景 */
+.regenerate-btn {
+  padding: 20rpx;
+  border-radius: 40rpx;
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: 600;
+  background-color: #07c160;
+}
+.regenerate-btn:hover { background: #16a34a; }
+
+/* 独立重置按钮：灰色背景，圆角，悬停时颜色加深 */
+.reset-btn {
+  padding: 20rpx;
+  border-radius: 40rpx;
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: 600;
+  border: none;
+  background: #6b7280;
+}
+.reset-btn:hover { background: #4b5563; }
+/* 按钮组内通用按钮：等分空间，固定高度，无边框 */
+.common-btn {
+  flex: 1;
+  height: 90rpx;
+  padding: 0;
+  font-size: 25rpx;
+  border-radius: 40rpx;
+  border: none;
+  line-height: 90rpx;
+}
+/* 清除小程序button组件默认的伪元素边框 */
+.common-btn::after { border: none; }
+
+/* 按钮组内重置按钮的样式覆盖：白色背景，灰色文字和边框 */
+.btn-group .reset-btn {
+  background-color: #fff;
+  color: #333;
+  border: 2rpx solid #e5e5e5;
+  margin: 20rpx 0rpx;
+}
+/* 结果卡片基础样式：内边距，大圆角，底部间距 */
+.result-card {
+  padding: 25rpx;
+  border-radius: 40rpx;
+  margin-bottom: 35rpx;
+}
+
+/* 卡片2-4的背景色与边框定义（假设卡片1有不同样式或不存在） */
+.result-card:nth-child(2) { background: #fffbeb; border: 2rpx solid #fde68a; }
+.result-card:nth-child(3) { background: #f5f3ff; border: 2rpx solid #ddd6fe; }
+.result-card:nth-child(4) { background: #e0e7ff; border: 2rpx solid #c7d2fe; }
+
+/* 卡片标题：加粗字体 */
+.card-title {
+  font-size: 30rpx;
+  font-weight: 550;
+  display: block;
+}
+
+/* 卡片2-4的标题颜色定义，与卡片背景色系匹配 */
+.result-card:nth-child(2) .card-title { color: #92400e; }
+.result-card:nth-child(3) .card-title { color: #7e22ce; }
+.result-card:nth-child(4) .card-title { color: #4338ca; }
+
+/* 卡片内容区域：使用弹性布局，深灰色文字 */
+.card-content {
+  display: flex;
+  font-size: 30rpx;
+  color: #374151;
+  margin-top: 25rpx;
+}
+/* 底部区域：顶部有外边距，内容居中 */
+.footer {
+  margin-top: 40rpx;
+  text-align: center;
+}
+
+/* 版权信息：小号灰色字体 */
+.copyright {
+  font-size: 24rpx;
+  color: #6b7280;
+}
+/* 通过伪元素 content 属性插入对应的Emoji图标 */
+.icon-utensils::before { content: "🍽️"; }
+.icon-pizza::before { content: "🍕"; }
+.icon-hamburger::before { content: "🍔"; }
+.icon-fish::before { content: "🐟"; }
+.icon-pepper::before { content: "🌶️"; }
+.icon-leaf::before { content: "🍃"; }
+.icon-seedling::before { content: "🌱"; }
+.icon-wind::before { content: "🫒"; }
+.icon-sun::before { content: "☀️"; }
+.icon-cloud-sun::before { content: "⛅"; }
+.icon-moon::before { content: "🌙"; }
